@@ -11,8 +11,7 @@ st.set_page_config(
 
 st.title("📊 Model Performance Metrics")
 
-# Example metrics
-# Replace with backend API later if available
+
 
 data = {
 
@@ -42,4 +41,6 @@ df.set_index("Model").plot(kind="bar", ax=ax)
 
 st.pyplot(fig)
 
-st.info("Navigate back to dashboard from sidebar → Heart Disease Detection")
+if st.button("⬅ Back to Dashboard", use_container_width=True):
+    st.switch_page("frontend.py")
+
