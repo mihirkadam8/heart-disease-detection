@@ -233,4 +233,12 @@ if predict_button:
 
 st.divider()
 
-st.info("View detailed model performance metrics from the sidebar → Model Metrics")
+col1, col2 = st.columns(2)
+
+with col1:
+    if st.button("📊 View Model Metrics", use_container_width=True):
+        st.switch_page("pages/model_metrics.py")
+
+with col2:
+    st.caption("Click to view accuracy, precision, recall, and F1-score of all models.")
+
